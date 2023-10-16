@@ -16,13 +16,11 @@
   margin-bottom: 30px;
   position: relative;
 }
-  /*786*/
   @media (min-width: 768px) {
   .header {
   padding: 20px;
   }
 }
-  /*1024*/
   @media (min-width: 1024px) {
   .header {
   padding: 20px;
@@ -131,7 +129,6 @@
 .header__theme-menu-button {
   color: var(--text-color);
   background-color: transparent;
-  text-align: center;
   font-family: var(--main-font);
   font-size: clamp(1.125rem, 1.125rem + 0vw, 1.125rem);
   font-style: normal;
