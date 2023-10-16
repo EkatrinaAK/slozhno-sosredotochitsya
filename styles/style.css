@@ -2,4 +2,496 @@
 
 .page {
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
+  background-color: var(--bg-color);
+}
+
+/* фон заголовка*/
+.header {
+  display: grid;
+  background-image: var(--heder-bg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: bottom;
+  padding: 10px;
+  margin-bottom: 30px;
+  position: relative;
+}
+  /*786*/
+  @media (min-width: 768px) {
+  .header {
+  padding: 20px;
+  }
+}
+  /*1024*/
+  @media (min-width: 1024px) {
+  .header {
+  padding: 20px;
+  }
+}
+/*уголки*/
+.header::before {
+  content: "";
+  display: block;
+  width: 25px;
+  height: 25px;
+  border-top: 1px solid var(--text-color);
+  border-right: 1px solid var(--text-color);
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+@media (min-width: 768px) {
+  .header::before {
+    right: 20px;
+    top: 20px;
+  }
+}
+@media (min-width: 1024px) {
+  .header::before {
+    right: 20px;
+    top: 20px;
+  }
+}
+.header::after {
+  content: "";
+  display: block;
+  width: 25px;
+  height: 25px;
+  border-bottom: 1px solid var(--text-color);
+  border-left: 1px solid var(--text-color);
+  position: absolute;
+  bottom: 20px;
+  left: 10px;
+}
+@media (min-width: 768px) {
+  .header::after {
+    left: 20px;
+    bottom: 20px;
+  }
+}
+@media (min-width: 1024px) {
+  .header::after {
+    left: 20px;
+    bottom: 20px;
+  }
+}
+/* стили для rec*/
+.rec {
+  display: var(--rec-display);
+  right: 10px;
+  top: 10px;
+  position: absolute;
+  min-width: 52px;
+  min-height: 26px;
+  background-image: url("../images/ellipse.svg");
+  background-repeat: no-repeat;
+  background-position: right center;
+  color: var(--accent-color);
+  text-align: center;
+  font-family: var(--main-font);
+  font-size: clamp(1.125rem, 1.125rem + 0vw, 1.125rem);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 25px;
+  text-transform: uppercase;
+  padding-right: 27px;
+}
+.rec_item {
+  color: var(--accent-color);
+  text-align: center;
+  font-family: var(--main-font);
+  font-size: clamp(1.125rem, 1.125rem + 0vw, 1.125rem);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 25px;
+  text-transform: uppercase;
+}
+
+/* cтили для меню*/
+.header__theme-menu-list {
+  display: grid;
+  justify-content: end;
+  margin-top: 65px;
+  gap: 10px;
+  list-style: none;
+}
+@media (min-width: 768px) {
+  .header__theme-menu-list {
+    margin-top: 171px;
+  }
+}
+@media (min-width: 1024px) {
+  .header__theme-menu-list {
+    grid-auto-flow: column;
+    justify-content: center;
+    margin: 0;
+  }
+}
+/*стили для кнопки*/
+.header__theme-menu-button {
+  color: var(--text-color);
+  background-color: transparent;
+  text-align: center;
+  font-family: var(--main-font);
+  font-size: clamp(1.125rem, 1.125rem + 0vw, 1.125rem);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px;
+  padding: 0px 13px;
+  outline: 0;
+  border: 0;
+  text-transform: lowercase;
+  text-align: center;
+  min-height: 26px;
+}
+.header__theme-menu-button_active {
+  outline: 1px solid currentColor;
+}
+
+.header__theme-menu-button:focus {
+  border-bottom: 1px solid currentColor;
+}
+.header__theme-menu-button:hover {
+  outline: 1px solid rgba(50, 49, 45, 0.4);
+}
+/*заголовок сайта*/
+.header_title {
+  color: var(--main-title-color);
+  text-shadow: 4px 4px 0 var(--accent-color);
+  font-family: var(--main-font);
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  font-style: normal;
+  font-weight: 700;
+  line-height: 82.5%;
+  padding-top: 66.5px;
+  padding-bottom: 55px;
+}
+@media (min-width: 768px) {
+  .header_title {
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+    padding-top: 175px;
+    padding-bottom: 161px;
+    margin-left: -20px;
+  }
+}
+@media (min-width: 1024px) {
+  .header_title {
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+    padding-top: 275px;
+    padding-bottom: 65px;
+    margin-left: -20px;
+  }
+}
+/*подзаголовок*/
+.sub-title {
+  font-size: clamp(1.125rem, 1.125rem + 0vw, 1.125rem);
+  margin-bottom: 66px;
+}
+@media (min-width: 768px) {
+  .sub-title {
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+    max-width: 50%;
+    justify-self: end;
+    padding-bottom: 98px;
+  }
+}
+@media (min-width: 1024px) {
+  .sub-title {
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+    max-width: 50%;
+    justify-self: end;
+    padding-top: 48px;
+    padding-bottom: 49px;
+  }
+}
+/*основной материал*/
+.main {
+  display: grid;
+  gap: 31px;
+}
+/*стили для первой и третьей секции*/
+.section-1 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(355px, 1fr));
+  padding-right: 10px;
+  padding-left: 10px;
+}
+@media (min-width: 768px) {
+  .section-1 {
+    padding-top: 31px;
+    padding-left: 20px;
+    padding-right: 20px;
+    grid-template-columns: 236px auto;
+    gap: 20px;
+  }
+}
+@media (min-width: 1024px) {
+  .section-1 {
+    padding-top: 31px;
+    padding-left: 20px;
+    padding-right: 20px;
+    grid-template-columns: 315px auto;
+    gap: 20px;
+  }
+}
+/* стили второй секции*/
+.section-2 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(355px, 1fr));
+  padding-right: 10px;
+  padding-left: 10px;
+}
+@media (min-width: 768px) {
+  .section-2 {
+    grid-template-columns: 1fr;
+    padding-top: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+@media (min-width: 1024px) {
+  .section-2 {
+    padding-top: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+.main-list-2 {
+  display: grid;
+  list-style: none;
+}
+@media (min-width: 1024px) {
+  .main-list-2 {
+    grid-template-columns: repeat(3, minmax(315px, 1fr));
+    gap: 20px;
+  }
+}
+/*заголовок секции*/
+.section-title {
+  color: var(--text-color);
+  font-family: var(--main-font);
+  font-size: clamp(1.125rem, 1.125rem + 0vw, 1.125rem);
+  font-style: normal;
+  font-weight: 700;
+  line-height: 23.4px;
+  margin-bottom: 19px;
+}
+@media (min-width: 768px) {
+  .section-title {
+    max-width: 236px;
+  }
+}
+@media (min-width: 1024px) {
+  .section-title {
+    max-width: 315px;
+  }
+}
+/* подзаголовок секции*/
+.title-decor {
+  color: var(--header-text-color);
+  background-color: var(--accent-color);
+  font-family: var(--main-font);
+  font-size: clamp(1.125rem, 1.125rem + 0vw, 1.125rem);
+  font-style: normal;
+  font-weight: 700;
+  line-height: 23.4px;
+}
+.main-list {
+  list-style: none;
+}
+/* основной текст*/
+.section-text {
+  color: var(--text-color);
+  font-family: var(--main-font);
+  font-size: clamp(1.125rem, 1.125rem + 0vw, 1.125rem);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 23.4px; /* 130% */
+  padding-top: 10px;
+  padding-bottom: 20px;
+}
+/*ссылка*/
+.link {
+  color: var(--text-color);
+  font-family: var(--main-font);
+  font-size: clamp(1.125rem, 1.125rem + 0vw, 1.125rem);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 23.4px;
+  text-shadow: 1px 1px 0 var(--accent-color);
+}
+.link:hover {
+  border-bottom: 1px solid var(--text-color);
+}
+.link:focus {
+  border: 1px solid var(--text-color);
+}
+/*заголовки третьей секции*/
+.title-accent {
+  margin-bottom: 20px;
+}
+/* секция с картинками*/
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.section-main-pic {
+  display: grid;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+@media (min-width: 768px) {
+  .section-main-pic {
+    padding-top: 25px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+.main-pic {
+  display: grid;
+  gap: 5px;
+  list-style: none;
+  padding-top: 10px;
+}
+@media (min-width: 768px) {
+  .main-pic {
+    padding-top: 20px;
+    gap: 20px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 192px 230px 318px;
+    align-items: stretch;
+    grid-template-areas:
+      "a a b"
+      "c d b"
+      "c e e";
+  }
+  .pic-item:nth-child(n + 1) {
+    grid-area: a;
+  }
+  .pic-item:nth-child(n + 2) {
+    grid-area: b;
+  }
+  .pic-item:nth-child(n + 3) {
+    grid-area: c;
+  }
+  .pic-item:nth-child(n + 4) {
+    grid-area: d;
+  }
+  .pic-item:nth-child(n + 5) {
+    grid-area: e;
+  }
+}
+@media (min-width: 1024px) {
+  .main-pic {
+    padding-top: 20px;
+    gap: 20px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 268px 315px 428px;
+    align-items: stretch;
+    grid-template-areas:
+      "a a b"
+      "c d b"
+      "c e e";
+  }
+  .pic-item:nth-child(n + 1) {
+    grid-area: a;
+  }
+  .pic-item:nth-child(n + 2) {
+    grid-area: b;
+  }
+  .pic-item:nth-child(n + 3) {
+    grid-area: c;
+  }
+  .pic-item:nth-child(n + 4) {
+    grid-area: d;
+  }
+  .pic-item:nth-child(n + 5) {
+    grid-area: e;
+  }
+}
+.pic {
+  display: block;
+  height: 100%;
+}
+/* подвал*/
+.footer {
+  display: grid;
+  position: relative;
+  min-height: 668px;
+  margin-top: 40px;
+  padding: 10px;
+  align-items: center;
+}
+@media (min-width: 768px) {
+  .footer {
+    min-height: 1024px;
+    margin-top: 60px;
+    padding: 20px;
+    align-items: center;
+    justify-content: center;
+  }
+}
+@media (min-width: 1024px) {
+  .footer {
+    min-height: 768px;
+    margin-top: 60px;
+    padding: 20px;
+    align-items: center;
+    justify-content: center;
+  }
+}
+/*уголки*/
+.footer::before {
+  content: "";
+  width: 25px;
+  height: 25px;
+  border-top: 1px solid var(--text-color);
+  border-right: 1px solid var(--text-color);
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+@media (min-width: 768px) {
+  .footer::before {
+    top: 20px;
+    right: 20px;
+  }
+}
+@media (min-width: 1024px) {
+  .footer::before {
+    top: 20px;
+    right: 20px;
+  }
+}
+.footer::after {
+  content: "";
+  width: 25px;
+  height: 25px;
+  border-bottom: 1px solid var(--text-color);
+  border-left: 1px solid var(--text-color);
+  position: absolute;
+  left: 10px;
+  bottom: 10px;
+}
+@media (min-width: 768px) {
+  .footer::after {
+    bottom: 20px;
+    left: 20px;
+  }
+}
+@media (min-width: 1024px) {
+  .footer::after {
+    bottom: 20px;
+    left: 20px;
+  }
+}
+.footer_title {
+  color: var(--main-title-color);
+  text-shadow: 4px 4px 0 var(--accent-color);
+  font-family: var(--main-font);
+  font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  font-style: normal;
+  font-weight: 700;
+  line-height: 82.5%;
 }
