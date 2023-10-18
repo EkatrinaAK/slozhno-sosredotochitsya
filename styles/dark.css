@@ -15,10 +15,10 @@
   --accent-color: #ff0070;
   --header-text-color: #000028;
   --text-color: #FFC2E6;
+  --color-side: rgba(255, 0, 112, 0.40); 
   --main-font: "IBM Plex mono", Courier;
   --heder-bg: url(../images/cover-image-dark.png);
   --rec-display: grid;
-  --color-side: rgba(255, 0, 112, 0.40); 
   --color-corner: var(--accent-color);
   --button-text: var(--accent-color);
 }
@@ -36,5 +36,5 @@
     --color-side: rgba(255, 0, 112, 0.40);
     --color-corner: var(--accent-color);
     --button-text: var(--accent-color);
-  } 
+}
 }
