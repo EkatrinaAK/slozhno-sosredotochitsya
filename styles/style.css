@@ -136,7 +136,6 @@
   outline: 1px solid currentColor;
   pointer-events: none;
 }
-
 .header__theme-menu-button:focus {
   border-bottom: 1px solid currentColor;
 }
