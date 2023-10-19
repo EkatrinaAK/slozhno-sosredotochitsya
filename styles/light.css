@@ -15,7 +15,7 @@
   --accent-color: #ff8dcb;
   --header-text-color: #353430;
   --text-color:#353430;
-  --main-font: "IBM Plex mono", Courier;
+  --main-font: 'IBM Plex mono', Courier,monospace;
   --heder-bg: url(../images/cover-image-light.png);
   --rec-display: none;
   --color-side: rgba(50, 49, 45, 0.40);
@@ -30,7 +30,7 @@
     --accent-color: #ff8dcb;
     --header-text-color: #353430;
     --text-color:#353430;
-    --main-font: "IBM Plex mono";
+    --main-font: 'IBM Plex mono', Courier,monospace;
     --heder-bg: url(../images/cover-image-light.png);
     --rec-display: none;
     --color-corner: #353430;
